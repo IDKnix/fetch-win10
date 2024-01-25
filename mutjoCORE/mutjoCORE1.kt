@@ -50,15 +50,18 @@ class mutjoCORE1 {
         }
 
     }
+
+    // This is the function used in fetch-win10. All others are used in a seperate project.
+    
     fun formatBytes(bytes: Long): String {
         val kilobytes = bytes / 1024
         val megabytes = kilobytes / 1024
         val gigabytes = megabytes / 1024
 
         return when {
-            gigabytes > 0 -> "$gigabytes GB"
-            megabytes > 0 -> "$megabytes MB"
-            kilobytes > 0 -> "$kilobytes KB"
+            gigabytes > 0 -> "$gigabytes GiB"
+            megabytes > 0 -> "$megabytes MiB"
+            kilobytes > 0 -> "$kilobytes KiB"
             else -> "$bytes Bytes"
         }
     }
